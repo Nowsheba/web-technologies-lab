@@ -50,6 +50,18 @@
             display: none;
         }
 
+        #login:target,
+        #registration:target {
+            display: block;
+        }
+
+        .content:has(#registration:target) #login {
+            display: none;
+        }
+
+        .content:has(#login:target) #registration {
+            display: none;
+        }
         .form-box h2 {
             text-align: center;
         }
@@ -82,10 +94,7 @@
             display: block;
         }
 
-        #login:target,
-        #registration:target {
-            display: block;
-        }
+        
     </style>
 </head>
 <body>
