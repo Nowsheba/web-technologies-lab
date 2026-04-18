@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TechFlow</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: black;
+            padding-top: 30px;
+        }
+
+        .sidebar h1 {
+            color: white;
+            text-align: center;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+        }
+
+        .sidebar a:hover {
+            background-color: gray;
+        }
+
+        .content {
+            flex: 1;
+            background-color: lightgray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-box {
+            width: 300px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        .form-box h2 {
+            text-align: center;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .login-btn {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h1>TechFlow</h1>
+        <a href="#">Login</a>
+        <a href="#">Registration</a>
+    </div>
+
+    <div class="content">
+        <div class="form-box">
+            <h2>Login</h2>
+            <form>
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter email">
+
+                <label>Password</label>
+                <input type="password" placeholder="Enter password">
+
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
