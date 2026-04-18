@@ -47,6 +47,7 @@
             padding: 25px;
             border-radius: 8px;
             box-shadow: 0 0 10px gray;
+            display: none;
         }
 
         .form-box h2 {
@@ -72,18 +73,32 @@
         .login-btn {
             background-color: blue;
         }
+
+        .register-btn {
+            background-color: green;
+        }
+
+        #login {
+            display: block;
+        }
+
+        #login:target,
+        #registration:target {
+            display: block;
+        }
     </style>
 </head>
 <body>
 
     <div class="sidebar">
         <h1>TechFlow</h1>
-        <a href="#">Login</a>
-        <a href="#">Registration</a>
+        <a href="#login">Login</a>
+        <a href="#registration">Registration</a>
     </div>
 
     <div class="content">
-        <div class="form-box">
+
+        <div class="form-box" id="login">
             <h2>Login</h2>
             <form>
                 <label>Email Address</label>
@@ -95,6 +110,28 @@
                 <button type="submit" class="login-btn">Login</button>
             </form>
         </div>
+
+        <div class="form-box" id="registration">
+            <h2>Registration</h2>
+            <form>
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter email">
+
+                <label>Password</label>
+                <input type="password" placeholder="Enter password">
+
+                <label>Gender</label>
+                <select>
+                    <option>Select Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+
+                <button type="submit" class="register-btn">Register</button>
+            </form>
+        </div>
+
     </div>
 
 </body>
